@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy | ToolFlux — AI Tools & Productivity</title>
+<meta name="description" content="Privacy Policy for ToolFlux.ai — Learn how we collect, use, and protect your personal information.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg: #080810; --bg2: #0d0d1a; --bg3: #12122a;
+    --surface: #16162a; --surface2: #1e1e35;
+    --border: rgba(255,255,255,0.07); --border2: rgba(255,255,255,0.12);
+    --cyan: #00e5ff; --violet: #8b5cf6; --amber: #f59e0b; --green: #10b981;
+    --text: #f0f0fa; --text2: #a0a0c0; --text3: #606080;
+    --font-display: 'Syne', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: 15px;
+    line-height: 1.7;
+  }
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: var(--bg2); }
+  ::-webkit-scrollbar-thumb { background: var(--surface2); border-radius: 3px; }
+  a { color: var(--cyan); text-decoration: none; transition: opacity 0.2s; }
+  a:hover { opacity: 0.8; text-decoration: underline; }
+
+  /* HEADER */
+  .site-header {
+    background: rgba(8,8,16,0.95);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 24px;
+    position: sticky; top: 0; z-index: 100;
+  }
+  .header-inner {
+    max-width: 1100px; margin: 0 auto;
+    display: flex; align-items: center;
+    height: 60px; gap: 20px;
+  }
+  .logo {
+    display: flex; align-items: center; gap: 10px;
+    text-decoration: none; color: var(--text);
+  }
+  .logo-icon {
+    width: 34px; height: 34px;
+    background: linear-gradient(135deg, var(--cyan), var(--violet));
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px;
+  }
+  .logo-name {
+    font-family: var(--font-display);
+    font-weight: 800; font-size: 20px; letter-spacing: -0.5px;
+  }
+  .logo-name span { color: var(--cyan); }
+  .header-right {
+    margin-left: auto;
+    display: flex; gap: 10px; align-items: center;
+  }
+  .btn {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-body); font-size: 13px; font-weight: 500;
+    padding: 7px 16px; border-radius: 6px; border: none; cursor: pointer;
+    transition: all 0.2s; text-decoration: none; line-height: 1;
+  }
+  .btn-ghost {
+    background: transparent; color: var(--text2);
+    border: 1px solid var(--border2);
+  }
+  .btn-ghost:hover { background: var(--surface); color: var(--text); text-decoration: none; }
+  .btn-primary { background: var(--cyan); color: #050510; font-weight: 600; }
+  .btn-primary:hover { background: #33eeff; transform: translateY(-1px); text-decoration: none; }
+
+  /* BREADCRUMB */
+  .breadcrumb {
+    display: flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 11px; color: var(--text3);
+    padding: 14px 0;
+  }
+  .breadcrumb a { color: var(--text3); }
+  .breadcrumb a:hover { color: var(--cyan); text-decoration: none; }
+  .breadcrumb-sep { opacity: 0.4; }
+
+  /* HERO */
+  .page-hero {
+    border-bottom: 1px solid var(--border);
+    padding: 48px 0 36px;
+    margin-bottom: 48px;
+    background: radial-gradient(ellipse 600px 300px at 70% 50%, rgba(0,229,255,0.04), transparent);
+    position: relative; overflow: hidden;
+  }
+  .eyebrow {
+    font-family: var(--font-mono); font-size: 10px;
+    color: var(--cyan); letter-spacing: 2.5px;
+    text-transform: uppercase; margin-bottom: 10px;
+  }
+  .page-hero h1 {
+    font-family: var(--font-display);
+    font-size: clamp(26px, 4vw, 40px);
+    font-weight: 800; letter-spacing: -1px;
+    margin-bottom: 10px;
+  }
+  .page-hero p { color: var(--text2); font-size: 14px; }
+  .last-updated {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: rgba(16,185,129,0.1);
+    border: 1px solid rgba(16,185,129,0.2);
+    color: var(--green);
+    font-family: var(--font-mono); font-size: 10px;
+    letter-spacing: 1px; text-transform: uppercase;
+    padding: 4px 10px; border-radius: 4px;
+    margin-top: 12px; display: inline-block;
+  }
+
+  /* LAYOUT */
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+  .content-layout {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 48px;
+    align-items: start;
+    padding-bottom: 80px;
+  }
+
+  /* STICKY TOC SIDEBAR */
+  .toc-sidebar { position: sticky; top: 80px; }
+  .toc-box {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 18px;
+  }
+  .toc-title {
+    font-family: var(--font-mono); font-size: 10px;
+    color: var(--text3); letter-spacing: 1.5px;
+    text-transform: uppercase; margin-bottom: 12px;
+  }
+  .toc-list { list-style: none; padding: 0; }
+  .toc-list li { margin-bottom: 4px; }
+  .toc-list a {
+    font-size: 12.5px; color: var(--text2);
+    display: block; padding: 4px 8px;
+    border-left: 2px solid transparent;
+    border-radius: 0 4px 4px 0;
+    transition: all 0.2s; text-decoration: none;
+    line-height: 1.4;
+  }
+  .toc-list a:hover {
+    color: var(--cyan);
+    border-left-color: var(--cyan);
+    background: rgba(0,229,255,0.05);
+  }
+  .contact-box {
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px;
+    margin-top: 14px;
+    font-size: 12px; color: var(--text2);
+  }
+  .contact-box strong { color: var(--text); display: block; margin-bottom: 6px; font-size: 12px; }
+
+  /* MAIN CONTENT */
+  .policy-content section {
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--border);
+  }
+  .policy-content section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+  .policy-content h2 {
+    font-family: var(--font-display);
+    font-size: 20px; font-weight: 700;
+    letter-spacing: -0.3px;
+    margin-bottom: 14px; color: var(--text);
+    display: flex; align-items: center; gap: 10px;
+  }
+  .policy-content h2 .icon {
+    font-size: 20px;
+    width: 36px; height: 36px;
+    background: var(--surface2);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .policy-content h3 {
+    font-family: var(--font-display);
+    font-size: 15px; font-weight: 700;
+    margin: 20px 0 8px; color: var(--text);
+  }
+  .policy-content p {
+    color: var(--text2); margin-bottom: 12px;
+    font-size: 14.5px; line-height: 1.75;
+  }
+  .policy-content ul, .policy-content ol {
+    padding-left: 20px; margin-bottom: 14px;
+  }
+  .policy-content li {
+    color: var(--text2); margin-bottom: 7px;
+    font-size: 14.5px; line-height: 1.65;
+  }
+  .policy-content li strong { color: var(--text); }
+
+  /* CALLOUT BOXES */
+  .callout {
+    border-radius: 6px; padding: 14px 18px;
+    margin: 16px 0; font-size: 14px;
+  }
+  .callout-cyan {
+    background: rgba(0,229,255,0.06);
+    border: 1px solid rgba(0,229,255,0.15);
+    color: var(--text2);
+  }
+  .callout-cyan strong { color: var(--cyan); }
+  .callout-amber {
+    background: rgba(245,158,11,0.07);
+    border: 1px solid rgba(245,158,11,0.15);
+    color: var(--text2);
+  }
+  .callout-amber strong { color: var(--amber); }
+  .callout-green {
+    background: rgba(16,185,129,0.07);
+    border: 1px solid rgba(16,185,129,0.15);
+    color: var(--text2);
+  }
+  .callout-green strong { color: var(--green); }
+
+  /* DATA TABLE */
+  .data-table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 13.5px; }
+  .data-table th {
+    background: var(--surface2);
+    text-align: left; padding: 10px 14px;
+    font-family: var(--font-mono); font-size: 10px;
+    letter-spacing: 1px; color: var(--text3);
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--border2);
+  }
+  .data-table td {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border);
+    color: var(--text2); vertical-align: top;
+  }
+  .data-table td strong { color: var(--text); }
+  .data-table tr:last-child td { border-bottom: none; }
+  .data-table tr:hover td { background: rgba(255,255,255,0.02); }
+  .table-wrap { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; margin: 16px 0; }
+
+  /* FOOTER */
+  .site-footer {
+    background: var(--bg2);
+    border-top: 1px solid var(--border);
+    padding: 28px 24px;
+    text-align: center;
+  }
+  .footer-inner { max-width: 1100px; margin: 0 auto; }
+  .footer-logo { display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 12px; text-decoration: none; color: var(--text); }
+  .footer-copy { font-family: var(--font-mono); font-size: 11px; color: var(--text3); margin-bottom: 10px; }
+  .footer-links { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+  .footer-links a { font-size: 12px; color: var(--text3); transition: color 0.2s; }
+  .footer-links a:hover { color: var(--cyan); text-decoration: none; }
+
+  @media (max-width: 768px) {
+    .content-layout { grid-template-columns: 1fr; }
+    .toc-sidebar { position: static; }
+  }
+  @media (max-width: 480px) {
+    .page-hero { padding: 32px 0 24px; }
+    .header-right .btn-primary { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/toolflux-ai/" class="logo">
+      <div class="logo-icon">⚡</div>
+      <div class="logo-name">Tool<span>Flux</span></div>
+    </a>
+    <div class="header-right">
+      <a href="/toolflux-ai/" class="btn btn-ghost">← Back to Site</a>
+      <a href="mailto:contact@toolflux.ai" class="btn btn-primary">Contact Us</a>
+    </div>
+  </div>
+</header>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="/toolflux-ai/">Home</a>
+      <span class="breadcrumb-sep">/</span>
+      <span>Privacy Policy</span>
+    </div>
+    <div class="eyebrow">Legal</div>
+    <h1>Privacy Policy</h1>
+    <p>How ToolFlux collects, uses, and protects your personal information.</p>
+    <div class="last-updated">Last Updated: December 1, 2025</div>
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="container">
+  <div class="content-layout">
+
+    <!-- SIDEBAR TOC -->
+    <aside class="toc-sidebar">
+      <div class="toc-box">
+        <div class="toc-title">Contents</div>
+        <ul class="toc-list">
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#information-collected">Information We Collect</a></li>
+          <li><a href="#how-we-use">How We Use Your Data</a></li>
+          <li><a href="#cookies">Cookies & Tracking</a></li>
+          <li><a href="#google-adsense">Google AdSense & Ads</a></li>
+          <li><a href="#affiliate">Affiliate Disclosure</a></li>
+          <li><a href="#third-parties">Third-Party Services</a></li>
+          <li><a href="#data-sharing">Data Sharing</a></li>
+          <li><a href="#your-rights">Your Rights</a></li>
+          <li><a href="#children">Children's Privacy</a></li>
+          <li><a href="#security">Data Security</a></li>
+          <li><a href="#changes">Policy Changes</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="contact-box">
+        <strong>Questions?</strong>
+        Email us at:<br>
+        <a href="mailto:contact@toolflux.ai">contact@toolflux.ai</a>
+      </div>
+    </aside>
+
+    <!-- POLICY CONTENT -->
+    <main class="policy-content">
+
+      <!-- OVERVIEW -->
+      <section id="overview">
+        <h2><span class="icon">📋</span> Overview</h2>
+        <div class="callout callout-cyan">
+          <strong>Plain English Summary:</strong> We collect basic analytics data to improve the site, use cookies for ads and functionality, and never sell your personal information to third parties. That's the short version — full details below.
+        </div>
+        <p>This Privacy Policy applies to <strong>ToolFlux</strong>, accessible at <strong>https://caala21.github.io/toolflux-ai</strong> ("the Site"). It explains what information we collect when you visit our website, how we use that information, and what rights you have regarding your data.</p>
+        <p>By using ToolFlux, you agree to the collection and use of information as described in this policy. If you disagree with any part of this policy, please discontinue use of our website.</p>
+        <p>We are committed to protecting your privacy and handling your data transparently and responsibly, in compliance with applicable privacy laws including the General Data Protection Regulation (GDPR), the California Consumer Privacy Act (CCPA), and other applicable regulations.</p>
+      </section>
+
+      <!-- INFORMATION COLLECTED -->
+      <section id="information-collected">
+        <h2><span class="icon">📥</span> Information We Collect</h2>
+        <p>We collect two types of information: information you provide directly, and information collected automatically when you use the site.</p>
+
+        <h3>Information You Provide Directly</h3>
+        <ul>
+          <li><strong>Email address</strong> — when you subscribe to our newsletter or contact us</li>
+          <li><strong>Name</strong> — if you choose to provide it when contacting us</li>
+          <li><strong>Message content</strong> — if you send us a message via contact forms</li>
+          <li><strong>Comments</strong> — if commenting is enabled on the site</li>
+        </ul>
+
+        <h3>Information Collected Automatically</h3>
+        <ul>
+          <li><strong>IP address</strong> — collected automatically by servers and analytics tools</li>
+          <li><strong>Browser type and version</strong> — to optimize site display</li>
+          <li><strong>Device type</strong> — mobile, tablet, or desktop</li>
+          <li><strong>Operating system</strong> — for compatibility purposes</li>
+          <li><strong>Pages visited</strong> — which pages you view and for how long</li>
+          <li><strong>Referring URL</strong> — the website that sent you to ToolFlux</li>
+          <li><strong>Date and time of visit</strong> — for analytics purposes</li>
+          <li><strong>Click data</strong> — which links and buttons you interact with</li>
+        </ul>
+
+        <h3>Information We Do NOT Collect</h3>
+        <ul>
+          <li>We do not collect credit card or payment information</li>
+          <li>We do not collect government ID or social security numbers</li>
+          <li>We do not knowingly collect data from children under 13</li>
+          <li>We do not collect sensitive personal data such as health or biometric information</li>
+        </ul>
+      </section>
+
+      <!-- HOW WE USE -->
+      <section id="how-we-use">
+        <h2><span class="icon">⚙️</span> How We Use Your Data</h2>
+        <p>We use the information we collect for the following purposes:</p>
+
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Purpose</th>
+                <th>Data Used</th>
+                <th>Legal Basis</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Deliver the website</strong></td>
+                <td>IP address, browser data</td>
+                <td>Legitimate interest</td>
+              </tr>
+              <tr>
+                <td><strong>Send newsletter</strong></td>
+                <td>Email address, name</td>
+                <td>Consent</td>
+              </tr>
+              <tr>
+                <td><strong>Improve the site</strong></td>
+                <td>Analytics, page views, clicks</td>
+                <td>Legitimate interest</td>
+              </tr>
+              <tr>
+                <td><strong>Serve relevant ads</strong></td>
+                <td>Cookies, browsing behavior</td>
+                <td>Consent / Legitimate interest</td>
+              </tr>
+              <tr>
+                <td><strong>Respond to enquiries</strong></td>
+                <td>Email, name, message</td>
+                <td>Contract / Consent</td>
+              </tr>
+              <tr>
+                <td><strong>Prevent fraud & abuse</strong></td>
+                <td>IP address, usage patterns</td>
+                <td>Legitimate interest</td>
+              </tr>
+              <tr>
+                <td><strong>Legal compliance</strong></td>
+                <td>Any relevant data</td>
+                <td>Legal obligation</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>We will never use your data for purposes not listed here without first obtaining your explicit consent.</p>
+      </section>
+
+      <!-- COOKIES -->
+      <section id="cookies">
+        <h2><span class="icon">🍪</span> Cookies & Tracking</h2>
+        <p>Cookies are small text files stored on your device when you visit a website. ToolFlux uses cookies to improve functionality, analyse traffic, and serve relevant advertising.</p>
+
+        <h3>Types of Cookies We Use</h3>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Cookie Type</th>
+                <th>Purpose</th>
+                <th>Duration</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Essential</strong></td>
+                <td>Required for the site to function correctly</td>
+                <td>Session</td>
+              </tr>
+              <tr>
+                <td><strong>Analytics</strong></td>
+                <td>Track page views, traffic sources, user behaviour (Google Analytics)</td>
+                <td>Up to 2 years</td>
+              </tr>
+              <tr>
+                <td><strong>Advertising</strong></td>
+                <td>Serve personalised ads via Google AdSense</td>
+                <td>Up to 13 months</td>
+              </tr>
+              <tr>
+                <td><strong>Functional</strong></td>
+                <td>Remember your preferences (e.g. newsletter dismissed)</td>
+                <td>Up to 1 year</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Managing Cookies</h3>
+        <p>You can control or delete cookies at any time through your browser settings. Please note that disabling cookies may affect the functionality of some parts of our site. To learn more about managing cookies, visit <a href="https://www.allaboutcookies.org" target="_blank">allaboutcookies.org</a>.</p>
+
+        <div class="callout callout-amber">
+          <strong>Note:</strong> Disabling advertising cookies does not mean you will see fewer ads — it means the ads you see will be less relevant to your interests.
+        </div>
+      </section>
+
+      <!-- GOOGLE ADSENSE -->
+      <section id="google-adsense">
+        <h2><span class="icon">💰</span> Google AdSense & Advertising</h2>
+        <p>ToolFlux uses <strong>Google AdSense</strong> to display advertisements on our website. Google AdSense is an advertising service provided by Google LLC.</p>
+
+        <h3>How Google AdSense Works</h3>
+        <p>Google uses cookies and similar technologies to show you ads based on your previous visits to our site and other websites across the internet. Google's use of advertising cookies enables it and its partners to serve ads based on your visit to our site and other sites on the internet.</p>
+
+        <ul>
+          <li>Google may use your browsing data to personalise advertisements</li>
+          <li>Third-party vendors, including Google, use cookies to serve ads based on prior visits to our website</li>
+          <li>You may opt out of personalised advertising by visiting <a href="https://www.google.com/settings/ads" target="_blank">Google's Ads Settings</a></li>
+          <li>You can also opt out via <a href="https://www.aboutads.info/choices/" target="_blank">aboutads.info</a></li>
+        </ul>
+
+        <h3>Google's Privacy Policy</h3>
+        <p>For more information on how Google collects and processes data, please review <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a>.</p>
+
+        <div class="callout callout-cyan">
+          <strong>Ad Disclosure:</strong> ToolFlux displays advertisements to support the free content we provide. We clearly label all ad units as "Advertisement" on our website.
+        </div>
+      </section>
+
+      <!-- AFFILIATE -->
+      <section id="affiliate">
+        <h2><span class="icon">🔗</span> Affiliate Disclosure</h2>
+        <p>ToolFlux participates in affiliate marketing programs. This means we may earn a commission when you click on certain links on our website and make a purchase or sign up for a service — at no extra cost to you.</p>
+
+        <h3>How Affiliate Links Work</h3>
+        <ul>
+          <li>Some links to AI tools and products on our site may be affiliate links</li>
+          <li>When you click these links, a cookie may be placed on your device to track the referral</li>
+          <li>We earn a small commission if you make a purchase, which helps fund the site</li>
+          <li>Our editorial opinions are <strong>not influenced by affiliate relationships</strong></li>
+          <li>We only recommend tools we genuinely believe provide value</li>
+        </ul>
+
+        <div class="callout callout-green">
+          <strong>Our Promise:</strong> Affiliate relationships never influence our reviews or rankings. A tool rated 9.0 isn't rated that way because we earn more — it's rated that way because we tested it and it earned that score.
+        </div>
+
+        <p>Affiliate programs we may participate in include but are not limited to: Amazon Associates, ShareASale, CJ Affiliate, Impact, and direct affiliate programs run by AI tool companies.</p>
+      </section>
+
+      <!-- THIRD PARTIES -->
+      <section id="third-parties">
+        <h2><span class="icon">🤝</span> Third-Party Services</h2>
+        <p>We use the following third-party services that may collect data about you. Each has its own privacy policy which we encourage you to review:</p>
+
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Service</th>
+                <th>Purpose</th>
+                <th>Privacy Policy</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Google Analytics</strong></td>
+                <td>Website traffic analysis</td>
+                <td><a href="https://policies.google.com/privacy" target="_blank">View Policy</a></td>
+              </tr>
+              <tr>
+                <td><strong>Google AdSense</strong></td>
+                <td>Display advertising</td>
+                <td><a href="https://policies.google.com/privacy" target="_blank">View Policy</a></td>
+              </tr>
+              <tr>
+                <td><strong>GitHub Pages</strong></td>
+                <td>Website hosting</td>
+                <td><a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" target="_blank">View Policy</a></td>
+              </tr>
+              <tr>
+                <td><strong>Google Fonts</strong></td>
+                <td>Typography / font delivery</td>
+                <td><a href="https://policies.google.com/privacy" target="_blank">View Policy</a></td>
+              </tr>
+              <tr>
+                <td><strong>Email provider</strong></td>
+                <td>Newsletter delivery</td>
+                <td>Varies by provider</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>These third-party services operate under their own privacy policies. We are not responsible for their data practices, and encourage you to read their policies before interacting with them.</p>
+      </section>
+
+      <!-- DATA SHARING -->
+      <section id="data-sharing">
+        <h2><span class="icon">🚫</span> Data Sharing & Selling</h2>
+
+        <div class="callout callout-green">
+          <strong>We do not sell your personal data.</strong> We never have and never will sell, rent, or trade your personal information to third parties for their marketing purposes.
+        </div>
+
+        <p>We may share your data only in the following limited circumstances:</p>
+        <ul>
+          <li><strong>Service providers</strong> — companies that help us operate the website (hosting, analytics, email) who are contractually bound to protect your data</li>
+          <li><strong>Legal requirements</strong> — if required by law, court order, or to protect the rights and safety of ToolFlux or others</li>
+          <li><strong>Business transfer</strong> — in the event of a merger, acquisition, or sale of assets, your data may transfer to the new entity under the same privacy protections</li>
+          <li><strong>With your consent</strong> — in any other circumstances, only with your explicit consent</li>
+        </ul>
+      </section>
+
+      <!-- YOUR RIGHTS -->
+      <section id="your-rights">
+        <h2><span class="icon">⚖️</span> Your Rights</h2>
+        <p>Depending on your location, you may have the following rights regarding your personal data:</p>
+
+        <h3>For All Users</h3>
+        <ul>
+          <li><strong>Right to access</strong> — request a copy of the personal data we hold about you</li>
+          <li><strong>Right to correction</strong> — request we correct inaccurate data</li>
+          <li><strong>Right to deletion</strong> — request we delete your personal data ("right to be forgotten")</li>
+          <li><strong>Right to opt out</strong> — unsubscribe from our newsletter at any time via the unsubscribe link in any email</li>
+          <li><strong>Right to withdraw consent</strong> — where processing is based on consent, you can withdraw it at any time</li>
+        </ul>
+
+        <h3>For EU/EEA Residents (GDPR)</h3>
+        <ul>
+          <li>Right to data portability</li>
+          <li>Right to restrict processing</li>
+          <li>Right to object to processing</li>
+          <li>Right to lodge a complaint with your local data protection authority</li>
+        </ul>
+
+        <h3>For California Residents (CCPA)</h3>
+        <ul>
+          <li>Right to know what personal information is collected</li>
+          <li>Right to know whether personal information is sold or disclosed</li>
+          <li>Right to opt out of the sale of personal information (we do not sell data)</li>
+          <li>Right to equal service and price even if you exercise your privacy rights</li>
+        </ul>
+
+        <p>To exercise any of these rights, contact us at <a href="mailto:contact@toolflux.ai">contact@toolflux.ai</a>. We will respond within 30 days.</p>
+      </section>
+
+      <!-- CHILDREN -->
+      <section id="children">
+        <h2><span class="icon">👶</span> Children's Privacy</h2>
+        <p>ToolFlux is not directed at children under the age of 13 (or 16 in some jurisdictions). We do not knowingly collect personal information from children.</p>
+        <p>If you are a parent or guardian and believe your child has provided us with personal information, please contact us immediately at <a href="mailto:contact@toolflux.ai">contact@toolflux.ai</a> and we will take steps to delete such information promptly.</p>
+        <p>If we become aware that we have inadvertently collected personal data from a child under the applicable age, we will delete that information immediately.</p>
+      </section>
+
+      <!-- SECURITY -->
+      <section id="security">
+        <h2><span class="icon">🔒</span> Data Security</h2>
+        <p>We take the security of your data seriously and implement appropriate technical and organisational measures to protect it against unauthorised access, loss, or misuse.</p>
+        <ul>
+          <li>Our website is served over <strong>HTTPS</strong> with SSL/TLS encryption</li>
+          <li>Access to any stored data is restricted to authorised personnel only</li>
+          <li>We regularly review our security practices and update them as needed</li>
+          <li>Email lists are stored with reputable, security-certified providers</li>
+        </ul>
+        <div class="callout callout-amber">
+          <strong>Important:</strong> No method of data transmission over the internet or electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your personal information, we cannot guarantee absolute security.
+        </div>
+      </section>
+
+      <!-- CHANGES -->
+      <section id="changes">
+        <h2><span class="icon">📝</span> Changes to This Policy</h2>
+        <p>We may update this Privacy Policy from time to time to reflect changes in our practices, technology, legal requirements, or other factors. When we do, we will:</p>
+        <ul>
+          <li>Update the <strong>"Last Updated"</strong> date at the top of this page</li>
+          <li>Notify newsletter subscribers of significant changes by email</li>
+          <li>Post a notice on the homepage for material changes</li>
+        </ul>
+        <p>We encourage you to review this Privacy Policy periodically to stay informed about how we protect your information. Your continued use of ToolFlux after any changes constitutes your acceptance of the updated policy.</p>
+
+        <h3>Policy History</h3>
+        <ul>
+          <li><strong>December 1, 2025</strong> — Initial policy published</li>
+        </ul>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact">
+        <h2><span class="icon">📧</span> Contact Us</h2>
+        <p>If you have any questions, concerns, or requests regarding this Privacy Policy or how we handle your personal data, please contact us:</p>
+
+        <div class="table-wrap">
+          <table class="data-table">
+            <tbody>
+              <tr>
+                <td><strong>Website Name</strong></td>
+                <td>ToolFlux</td>
+              </tr>
+              <tr>
+                <td><strong>Website URL</strong></td>
+                <td><a href="https://caala21.github.io/toolflux-ai">https://caala21.github.io/toolflux-ai</a></td>
+              </tr>
+              <tr>
+                <td><strong>Email</strong></td>
+                <td><a href="mailto:contact@toolflux.ai">contact@toolflux.ai</a></td>
+              </tr>
+              <tr>
+                <td><strong>Response Time</strong></td>
+                <td>Within 30 days</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>We take all privacy enquiries seriously and will respond to your request as quickly as possible. For urgent matters, please mark your email subject line with <strong>[PRIVACY]</strong>.</p>
+
+        <div class="callout callout-cyan">
+          <strong>Tip:</strong> If you'd like to unsubscribe from our newsletter, the fastest way is to click the unsubscribe link at the bottom of any email we've sent you — no need to contact us directly.
+        </div>
+      </section>
+
+    </main>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <a href="/toolflux-ai/" class="footer-logo">
+      <div class="logo-icon" style="width:28px;height:28px;font-size:13px;background:linear-gradient(135deg,#00e5ff,#8b5cf6);border-radius:6px;display:flex;align-items:center;justify-content:center;">⚡</div>
+      <span style="font-family:'Syne',sans-serif;font-weight:800;font-size:17px;">Tool<span style="color:#00e5ff">Flux</span></span>
+    </a>
+    <div class="footer-copy">© 2025 ToolFlux — All rights reserved</div>
+    <div class="footer-links">
+      <a href="/toolflux-ai/">Home</a>
+      <a href="/toolflux-ai/privacy-policy.html">Privacy Policy</a>
+      <a href="#">Terms of Use</a>
+      <a href="#">Affiliate Disclosure</a>
+      <a href="mailto:contact@toolflux.ai">Contact</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
