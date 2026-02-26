@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>404 — Page Not Found | ToolFlux</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #080810;
+    color: #f0f0fa;
+    font-family: 'DM Sans', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 24px;
+    background-image: radial-gradient(ellipse 600px 400px at 50% 40%, rgba(0,229,255,0.05), transparent);
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 48px;
+    text-decoration: none;
+  }
+  .logo-icon {
+    width: 34px; height: 34px;
+    background: linear-gradient(135deg, #00e5ff, #8b5cf6);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px;
+  }
+  .logo-name {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800; font-size: 20px;
+    color: #f0f0fa;
+  }
+  .logo-name span { color: #00e5ff; }
+  .error-num {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(80px, 20vw, 160px);
+    font-weight: 800;
+    line-height: 1;
+    color: transparent;
+    background: linear-gradient(135deg, #00e5ff, #8b5cf6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    margin-bottom: 16px;
+  }
+  h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(20px, 4vw, 28px);
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  p { color: #a0a0c0; font-size: 15px; max-width: 360px; line-height: 1.6; margin-bottom: 32px; }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #00e5ff;
+    color: #050510;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+  .btn:hover { background: #33eeff; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,229,255,0.3); }
+</style>
+</head>
+<body>
+  <a href="/toolflux-ai/" class="logo">
+    <div class="logo-icon">⚡</div>
+    <div class="logo-name">Tool<span>Flux</span></div>
+  </a>
+  <div class="error-num">404</div>
+  <h1>Page Not Found</h1>
+  <p>The page you're looking for doesn't exist or has been moved. Let's get you back to discovering great AI tools.</p>
+  <a href="/toolflux-ai/" class="btn">← Back to Home</a>
+</body>
+</html>
